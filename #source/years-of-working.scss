@@ -1,0 +1,64 @@
+.years{
+    @include flex-row-center;
+    justify-content: center;
+
+    &_position{
+        padding-top: 10vh;
+        padding-bottom: 20vh;
+    }
+
+    &__content-part{
+        width: 35vw;
+        margin-right: 10vw;
+
+        & h1{
+            font-size: $font-50;
+            font-family: Poppins500, $font-families;
+            line-height: 1.4;
+        }
+        
+        & button{
+            width: 145px;
+            height: 47px;
+            margin-top: 60px;
+            background-color: $color-deep-aquamarine;
+            color: $color-white;
+            font-family: OpenSans700, $font-families;
+            font-size: $font-18;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 20px 0px;
+            cursor: pointer;
+        }
+
+        @media  screen and (max-width: 1200px) {
+            width: 90%;
+            margin-right: 0;
+            @include flex-column-center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 5vh;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        @include flex-column-center;
+    }
+
+    @media screen and (max-width: 900px) {
+        padding-bottom: 0;
+    }
+}
+
+.mask{
+    mask-image: url("../images/20.svg");
+    mask-repeat: no-repeat;
+
+    &__photo{
+        background-image: url("../images/photo.jpg");
+        height: 300px;
+        width: 482px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

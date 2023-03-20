@@ -1,0 +1,49 @@
+.about{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+    &__position{
+        padding-top: 19vh;
+    }
+
+    .block-text{
+        width: 36vw;
+    
+        &_position{
+            margin-top: 0;
+        }
+    
+        & h1{
+            width: 31vw;
+            font-family: Poppins500, $font-families;
+            font-size: $font-48;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+        }
+
+        & button{
+            width: 180px;
+        }
+
+        @media screen and (max-width: 800px) {
+            @include flex-column-center;
+            justify-content: center;
+            width: 90%;
+            text-align: center;
+        }
+    }
+
+    .picture{
+        &__square{
+            top: -4%;
+            left: -4%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        @include flex-column-center;
+    }
+}

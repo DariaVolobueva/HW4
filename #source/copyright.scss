@@ -1,0 +1,27 @@
+.copyright{
+    @include flex-column-center;
+    width: 100%;
+    background-color: $color-cultured;
+
+    &_position{
+        padding-top: 70px;
+        padding-bottom: 25px;
+    }
+
+    & div{
+        width: 100%;
+        height: 1px;
+        background-color: $color-granite-grey;
+    }
+
+    & p{
+        margin-top: 15px;
+        font-family: OpenSans400, $font-families;
+        font-size: $font-18;
+        color: $color-granite-grey;
+
+        & span{
+            color: $color-deep-aquamarine;
+        }
+    }
+}

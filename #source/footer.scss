@@ -1,0 +1,89 @@
+.footer{
+    width: 100%;
+    background-color: $color-cultured;
+    @include flex-row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &_position{
+        padding-top: 10vh;
+    }
+
+    & div{
+        @include flex-column;
+    }
+
+    &__logo{
+        & img{
+            width: 151px;
+            height: 47px;
+        }
+
+        & p{
+            margin-top: 2vh;
+            font-family: OpenSans400, $font-families;
+            font-size: $font-18;
+            color: $color-granite-grey;
+            width: 350px;
+            line-height: 1.4;
+        }
+    }
+
+    &__quick-links{
+        @include footer-links();
+    }
+
+    &__company{
+        @include footer-links();
+    }
+
+    &__contact-us{
+        @include footer-links();
+    }
+
+    &__follow-us{
+        margin-left: 7vw;
+        & span{
+            font-family: OpenSans600, $font-families;
+            font-size: $font-24;
+            margin-bottom: 4vh;
+        }
+    }
+}
+
+.socials{
+    flex-direction: row !important;
+
+    & a{
+        width: 37px;
+        height: 37px;
+        margin-right: 10px;
+        border-radius: 50%;
+        background-color: $color-light-grey;
+        transition: all .3s;
+
+        &:hover{
+            background-color: $color-deep-aquamarine;
+        }
+    }
+
+    &__facebook{
+        background-image: url(../images/facebook.svg);
+        @include background-center-norepeat;
+    }
+
+    &__twitter{
+        background-image: url(../images/twitter.svg);
+        @include background-center-norepeat;
+    }
+
+    &__inst{
+        background-image: url(../images/instagram.svg);
+        @include background-center-norepeat;
+    }
+
+    &__in{
+        background-image: url(../images/linked.svg);
+        @include background-center-norepeat;
+    }
+}

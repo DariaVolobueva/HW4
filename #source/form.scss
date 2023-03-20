@@ -1,0 +1,120 @@
+.form{
+    @include flex-column-center;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    width: 100%;
+    justify-content: center;
+
+    & form{
+        @include flex-column-center;
+    }
+
+    .block-text{
+        text-align: center;
+        @include flex-column-center;
+        width: 90%;
+
+        & h1{
+            font-size: $font-48;
+            font-family: Poppins500, $font-families;
+        }
+
+        & div{
+            width: 25%;
+            height: 1px;
+            background-color: $color-granite-grey;
+            align-self: center;
+        }
+
+        & p{
+            width: 38%;
+            margin-top: 5vh;
+
+            @media screen and (max-width: 900px) {
+                width: 60%;
+            }
+        }
+    }
+
+    &__inputs{
+        @include flex-row;
+        margin-top: 4vh;
+
+        & input{
+            width: 371px;
+            height: 48px;
+            border: none;
+            border-radius: 20px 0px;
+            background-color: $color-cultured;
+            color: $color-granite-grey;
+            font-size: $font-16;
+            font-family: Poppins400, $font-families;
+            padding-left: 30px;
+
+            &:first-child{
+                margin-right: 2vw;
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 271px;
+            }
+        }
+    }
+
+    & form > input{
+        margin-top: 6vh;
+        width: 772px;
+        height: 48px;
+        border: none;
+        border-radius: 20px 0px;
+        background-color: $color-cultured;
+        color: $color-granite-grey;
+        font-size: $font-16;
+        font-family: Poppins400, $font-families;
+        padding-left: 30px;
+
+        &:first-child{
+            margin-right: 100px;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 557px;
+        }
+    }
+
+    & button{
+        width: 145px;
+        height: 47px;
+        margin-top: 60px;
+        background-color: $color-deep-aquamarine;
+        color: $color-white;
+        font-family: OpenSans500, $font-families;
+        font-size: $font-16;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 20px 0px;
+        cursor: pointer;
+    }
+}
+
+body{
+    .congratulationMessage{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        & h1{
+            font-size: $font-72;
+            color: $color-deep-aquamarine;
+        }
+    
+        & h2{
+            font-size: $font-50;
+            color: $color-bronze;
+        }
+    }
+}
+

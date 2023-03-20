@@ -1,0 +1,50 @@
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin font-size-color($size, $color){
+    font-size: $size;
+    color: $color;
+}
+
+@mixin background-center-norepeat{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+//footer mixins
+
+@mixin footer-links{
+    margin-left: 7vw;
+
+    & span{
+        font-family: OpenSans600, $font-families;
+        font-size: $font-24;
+        margin-bottom: 4vh;
+    }
+
+    & p{
+        font-family: OpenSans400, $font-families;
+        font-size: $font-18;
+        color: $color-granite-grey;
+        margin-bottom: 2vh;
+    }
+}

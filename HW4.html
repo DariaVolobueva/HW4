@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>HW4</title>
+    
+</head>
+<body   onkeydown="resetTimeout();" 
+        onmousedown='resetTimeout();' 
+        onmousemove="resetTimeout();"
+        onscroll="resetTimeout();"
+        onload="timeoutObject=setTimeout('promptForClose()',60000);">
+
+    <div class="preloader" id="preloader">
+        <div class="load">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="load__text">Loading...</div>
+        </div>    
+    </div>
+    <main>
+        <nav class="navbar navbar_position">
+            <img class="navbar__logo" src="./images/logo.png">
+            <div class="navbar__burger"></div>
+            <div class="navbar__menu">
+                <a href="#home">home</a>
+                <a href="#project">project</a>
+                <a href="#services">services</a>
+                <a href="#about">about</a>
+                <a href="#blog">blog</a>
+                <a href="#shop">shop</a>
+                <a href="#contact">contact</a>
+            </div>
+            <button class="navbar__button">sign up</button>
+        </nav>
+        <div id="scroll-bar"></div>
+    
+        <div id="home" class="hero hero_position">
+            <div class="block-text block-text_position">
+                <p>MODERN INTERIOR</p>
+                <h1>Create Your
+                    Interior Design.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation.</p>
+                <button>contact</button>
+            </div>
+            <div class="picture">
+                <img src="./images/interier.png" alt="">
+                <div class="picture__square"></div>
+            </div>
+        </div>
+    
+        <div id="services" class="what-we-do what-we-do_position">
+            <div class="main-text">
+                <p>WHAT WE DO</p>
+                <h1>Our Service</h1>
+            </div>
+            <div class="what-we-do__buttons">
+                <button id="all">ALL</button>
+                <button id="interior">INTERIOR DESIGN</button>
+                <button id="architecture">ARCHITECTURE</button>
+                <button id="planning">PLANNING</button>
+            </div>
+            <div class="what-we-do__services">
+    
+            </div>
+        </div>
+    
+        <div id="about" class="about about__position">
+            <div class="block-text block-text_position">
+                <p>ABOUT US</p>
+                <h1>Interioris The Will
+                    of An Epoch Mextreo</h1>
+                <p>There are many variations of passages of Lorem Ipsum available,
+                    but the majority have suffered alteration in some form injected
+                    humour, or randomised words which don't look even slightly
+                    believable.If you are going to use a passage of Lorem Ipsum,
+                    sure there isn't anything embarrassing hidden the middleof text.
+                    All the Lorem Ipsum generators on the Internettend to repeat
+                    predefined chunks as necessary,making this the first true
+                    generator on the Internet.</p>
+                <button>LEARN MORE</button>
+            </div>
+            <div class="picture">
+                <img src="./images/interier2.png" alt="">
+                <div class="picture__square"></div>
+            </div>
+        </div>
+    
+        <div id="shop" class="years years_position">
+            <div class="years__content-part">
+                <div class="mask">
+                    <img class="mask__photo">
+                </div>
+                <h1>Years Of Successful
+                    Working
+                    The Market</h1>
+                <button>read more</button>
+            </div>
+            <div class="picture">
+                <img src="./images/bulbs.png" alt="">
+                <div class="picture__square"></div>
+            </div>
+        </div>
+    
+        <div id="project" class="completed-work completed-work_position">
+            <div class="completed-work__header">
+                <h1>3000+ Completed Work<br>
+                    Which WE have Successfully Done</h1>
+            </div>
+            <div class="completed-work__scheme">
+                <div class="completed-work__block">
+                    <p><span>980</span> Project</p>
+                </div>
+                <span class="completed-work__line"></span>
+                <div class="completed-work__block">
+                    <p><span>520</span> Happy Client</p>
+                </div>
+                <span class="completed-work__line"></span>
+                <div class="completed-work__block">
+                    <p><span>330</span> Winners</p>
+                </div>
+                <span class="completed-work__line"></span>
+                <div class="completed-work__block">
+                    <p><span>120</span> Recoment</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="testimonials testimonials_position">
+            <div class="block-text">
+                <p>TESTIMONIALS</p>
+                <h1>Client says about us</h1>
+            </div>
+    
+            <div class="swiper mySwiper">
+                <div class="testimonials__arrows">
+                    <button><</button>
+                    <button>></button>
+                </div>
+                <div class="testimonials__comments swiper-wrapper">
+    
+                    </div>                       
+                </div>
+            </div>
+        </div>
+    
+        <div id="blog" class="latest-news latest-news_position">
+            <div class="block-text">
+                <p>LATEST NEWS</p>
+                <h1>From Our Blog</h1>
+            </div>
+            <div class="news">
+                <div class="news__content">
+                    <div class="picture">
+                        <img src="./images/blog1.png" alt="">
+                        <div class="picture__square"></div>
+                    </div>
+                    <div class="block-text block-text_position">
+                        <h1>2020 Interior Design Trends</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            incididunt ut labore et dolore magna aliqua.</p>
+                        <button>CONTINUE READING....</button>
+                    </div>                
+                </div>
+    
+                <div class="news__content">
+                    <div class="picture">
+                        <img src="./images/blog2.png" alt="">
+                        <div class="picture__square"></div>
+                    </div>
+                    <div class="block-text block-text_position">
+                        <h1>28 Notable Product at Interior Design</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            incididunt ut labore et dolore magna aliqua.</p>
+                        <button>CONTINUE READING....</button>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    
+        <div class="form">
+            <div class="block-text block-text_position">
+                <h1>DON’T FORGET TO SIGN UP</h1>
+                <div></div>
+                <p>Find out early about all upcoming promotions and new product releases with
+                    our newsletter.</p>
+            </div>
+            <form action="#">
+                <div class="form__inputs">
+                    <input type="text" placeholder="Enter your name....." required pattern="^[A-Z]{1}[a-z]+" title="First letter should be uppercase, no numbers, no spaces" autocomplete="cc-name">
+                    <input type="text" placeholder="Enter your surname....." required pattern="^[A-Z]{1}[a-z]+" title="First letter should be uppercase, no numbers, no spaces" autocomplete="family-name">
+                </div> 
+                <input type="email" placeholder="Enter your e-mail....." required autocomplete="email">
+                <button>SUBSCRIBE</button>
+            </form>    
+        </div>
+    
+        <div id="contact" class="footer footer_position">
+            <div class="footer__logo">
+                <img src="./images/logo.png" alt="">
+                <p>But i must explain to you all this mistaken
+                    idea of dencouncing pleasure.</p>
+            </div>
+            <div class="footer__quick-links">
+                <span>Quick Links</span>
+                <p>About Our Company</p>
+                <p>Services WE provide</p>
+                <p>Career & Opportunity</p>
+                <p>Privacy & policy</p>
+                <p>Contact US</p>
+            </div>
+            <div class="footer__company">
+                <span>Company</span>
+                <p>About Company</p>
+                <p>Our Testimonials</p>
+                <p>Latest News</p>
+                <p>Our misson</p>
+                <p>Get a free Quot</p>            
+            </div>
+            <div class="footer__contact-us">
+                <span>Contact us</span>
+                <p>Sagrada Familia, Herba</p>
+                <p>Street Front USA</p>
+                <p>brandoxide@gmail.com</p>
+                <p>002-568423591</p>
+            </div>
+            <div class="footer__follow-us">
+                <span>Follow Us</span>
+                <div class="socials">
+                    <a href="https://www.facebook.com/interiorndecorideas/" class="socials__facebook"></a>
+                    <a href="https://twitter.com/InteriorDesign" class="socials__twitter"></a>
+                    <a href="https://www.instagram.com/interiordesignmag/?hl=en" class="socials__inst"></a>
+                    <a href="https://www.linkedin.com/company/interior-designer" class="socials__in"></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="copyright copyright_position">
+            <div></div>
+        </div>
+    </main>
+    
+    <script src="./scripts/preloader.js"></script>
+    <script src="./scripts/scroll.js"></script>
+    <script src="./scripts/what-we-do.js"></script>
+    <script src="./scripts/testimonials.js"></script>
+    <script src="./scripts/swiper.js"></script>
+    <script src="./scripts/latest-news.js"></script>
+    <script src="./scripts/form.js"></script>
+    <script src="./scripts/copyright.js"></script>
+    <script src="/scripts/close-window.js"></script>
+    <script src="./scripts/open-api.js"></script>
+</body>
+</html>

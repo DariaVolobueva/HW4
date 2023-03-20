@@ -1,0 +1,88 @@
+.latest-news{
+    padding-top: 9vh;
+    padding-bottom: 14vh;
+    @include flex-column-center;
+    background-color: $color-cultured;
+    width: 100%;
+
+    .block-text{
+        text-align: center;
+
+        & p{
+            font-family: Poppins500, $font-families;
+        }
+
+        & h1{
+            font-size: $font-48;
+            font-family: Poppins500, $font-families;
+        }
+    }
+}
+
+.news{
+    @include flex-row;
+
+    &__content{
+        @include flex-column-center;
+
+        opacity: 0;
+        transform: translateY(70px);
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+
+        &:first-child{
+            margin-right: 7vw;
+        }
+        
+        &.animation-class{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .picture{
+        & img{
+            position: relative;
+            width: 34vw;
+            height: 25vw;
+            border-radius: 100px 0px;
+            z-index: 1;
+            transition: all .3s ease-out;
+        }
+    
+        &__square{
+            width: 34vw;
+            height: 25vw;
+            border-radius: 100px 0px;
+        }
+
+        & img:hover{
+            width: 36vw;
+            height: 27vw;
+        }
+    }
+
+    .block-text{
+        text-align: left;
+        width: 37vw;
+
+        & p{
+            font-family: OpenSans400, $font-families;
+            font-size: $font-18;
+            line-height: 1.3;
+        }
+
+        & h1{
+            font-size: $font-30;
+        }
+
+        & button{
+            width: 271px;
+            font-family: OpenSans600, $font-families;
+            font-size: $font-16;
+
+            @media screen and (max-width: 900px) {
+                width: 200px;
+            }
+        }
+    }
+}

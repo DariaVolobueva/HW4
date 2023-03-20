@@ -1,0 +1,108 @@
+.completed-work{
+    background-color: $color-cultured;
+    width: 100%;
+    @include flex-column-center;
+
+    &_position{
+        padding-top: 5vh;
+        padding-bottom: 16vh;
+    }
+
+    &__header{
+        width: auto;
+        text-align: center;
+        margin-top: 7vh;
+
+        & h1{
+            font-size: $font-48;
+            font-family: Poppins500, $font-families;
+        }
+    }
+
+    &__scheme{
+        @include flex-row;
+        margin-top: 7vh;
+    }
+
+    &__block{
+        @include flex-column-center;
+        justify-content: center;
+        height: 20vh;
+        width: 20vh;
+        border-radius: 40px 0px;
+        background-color: $color-white;
+        box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+
+        & p{
+            font-size: $font-18;
+            font-family: OpenSans700, $font-families;
+            color: $color-granite-grey;
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 1.1;
+
+            & span{
+                font-size: $font-50;
+                color: $color-chinese-black;
+
+                @media screen and (max-width: 999px) {
+                    font-size: $font-30;
+                }
+            }
+        }
+
+        &:first-child{
+            margin-left: 0;
+        }
+
+        &:nth-of-type(2n){
+            margin-top: 100px;
+        }
+
+        @media screen and (max-width: 1300px) {
+            height: 15vh;
+            width: 15vh;
+        }
+
+        @media screen and (max-width: 1099px) {
+            height: 14vh;
+            width: 14vh;
+        }
+
+        @media screen and (max-width: 999px) {
+            height: 12vh;
+            width: 12vh;
+        }
+    }
+
+    &__line{
+        margin-top: 100px;
+        background-image: url(../images/line1.svg);
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 150px;
+
+        &:nth-of-type(2n){
+            background-image: url(../images/line2.svg);
+            stroke: transparent;
+            stroke-width: 0px;
+        }
+
+        @media screen and (max-width: 1099px) {
+            height: 130px;
+            width: 130px;
+        }
+
+        @media screen and (max-width: 999px) {
+            height: 110px;
+            width: 110px;
+            margin-top: 70px;
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        display: none;
+    }
+}
+

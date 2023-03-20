@@ -1,0 +1,162 @@
+.what-we-do{
+    @include flex-column;
+    justify-content: center;
+    width: 100%;
+
+    &_position{
+        padding-top: 15vh;
+    }
+
+    &__buttons{
+        display: flex;
+        grid-template-columns: repeat(5, 1fr);
+        flex-wrap: wrap;
+        // justify-content: start;
+        gap: 5vw;
+        padding-left: 13vw;
+
+        & button{
+            width: 200px;
+            height: 46px;
+            border: none;
+            border-radius: 20px;
+            background-color: $color-deep-aquamarine;
+            color: $color-white;
+            text-transform: uppercase;
+            font-family: OpenSans700, $font-families;
+            font-size: $font-16;
+            cursor: pointer;
+        }
+    }
+
+    &__services{
+        @include flex-row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5vh;
+
+        & > div{
+            width: 477px;
+            height: 165px;
+            margin-top: 50px;
+            margin-right: 50px;
+            border-radius: 60px 0px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
+        }
+    }
+
+    &__service{
+        @include flex-row-center;
+        justify-content: center;
+        animation: fadeIn ease-in 1s backwards;
+
+
+        & img{
+            align-self: flex-start;
+            margin-top: 35px;
+            margin-right: 20px;
+        }
+    }
+
+    &_all{
+        & img{
+            height: 36px;
+            width: 46px;
+        }
+
+        &:nth-child(2n){
+            background-color: $color-khaki;
+            color: $color-white;
+
+            & img{
+                background-image: url("../images/architecture.svg"); 
+            }
+        }
+        
+        &:first-child{
+            & img{
+                background-image: url("../images/interior.svg");
+            }
+        }
+
+        &:last-child{
+            & img{
+                background-image: url("../images/planning.svg");
+            }
+        }
+    }
+
+    &_interior{
+        & img{
+            background-image: url("../images/interior.svg");
+            height: 36px;
+            width: 46px; 
+        }
+    }
+
+    &_architecture{
+        background-color: $color-khaki;
+        color: $color-white;
+
+        & img{
+            background-image: url("../images/architecture.svg");
+            height: 36px;
+            width: 46px;  
+        }
+    }
+
+    &_planning{
+        & img{
+            background-image: url("../images/planning.svg");
+            height: 36px;
+            width: 46px; 
+        }
+    }
+
+    &__text{
+        @include flex-column;
+        width: 350px;
+
+        & p{
+            &:first-child{
+                font-family: OpenSans700, $font-families;
+                font-size: $font-24;
+            }
+
+            &:last-child{
+                font-family: OpenSans400, $font-families;
+                font-size: $font-18;
+                line-height: 1.3;
+                -webkit-line-clamp: 3; 
+            }
+        }
+    }
+}
+
+.main-text{
+    padding-left: 13vw;
+
+    & p{
+        color: $color-granite-grey;
+        font-family: OpenSans600, $font-families;
+        font-size: $font-20;
+        text-transform: uppercase;
+    }
+
+    & h1{
+        margin-top: 13px;
+        margin-bottom: 50px;
+        font-family: Poppins500, $font-families;
+        color: $color-raisin-black;
+        font-size: $font-48;
+        text-transform: capitalize;
+    }
+
+    @media screen and (max-width: 1800px) {
+        padding-left: 10vw;
+    }
+
+    @media screen and (max-width: 1500px) {
+        padding-left: 6vw;
+    }
+}
